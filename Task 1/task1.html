@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 10 - Compulsory Task 1</title>
+    <script src="task1.js"></script> <!-- Use task1.js external script file -->
+</head>
+
+<body onload="pageLoaded()">
+    <!-- Call pageLoaded() function when page finishes loading -->
+    <div>
+        <h1 id="mainHeading">Using Javascript to manipulate the DOM</h1>
+        <button onclick="changeTextSize()">Change heading size!</button>
+        <!-- Run changeTextSize() function when clicked -->
+
+        <h2 id="subHeading1">It seems tricky but it is quite simple</h2>
+
+        <!-- Highlight paragraph when mouse hovers over, remove highlight when mouse leaves -->
+        <p onmouseover="highlightAll()" onmouseout="unHighlightAll()" id="para1">Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Vivamus malesuada luctus justo et elementum. Vestibulum purus dolor, lobortis id varius
+            vel, elementum sit amet purus. Donec eu dolor quis justo mollis malesuada. Aenean sed risus massa. Phasellus
+            egestas maximus orci sed sollicitudin. Cras tincidunt venenatis sapien sed fermentum. Aenean quis erat
+            cursus, cursus odio eu, pretium nisl. Phasellus maximus maximus ullamcorper. In ut augue sit amet arcu
+            pellentesque laoreet vel non massa. Ut facilisis in augue eget placerat. Morbi molestie scelerisque tortor.
+            Aliquam maximus, velit eu congue commodo, leo lacus pellentesque nunc, id bibendum nibh ipsum nec metus.
+            Maecenas dictum porttitor cursus.
+        </p>
+        <button onclick="changeFontStyle()">Change font style!</button> <!-- Call changeFontStyle() function-->
+        <br>
+        <button onclick="highlight()">Highlight paragraph above!</button>
+        <!-- Call highlight() function when clicked -->
+
+    </div>
+    <div>
+        <form onsubmit="formAlert()">
+            <!-- Call formAlert() function when submit button is clicked -->
+            <label>What is your favourite food?</label>
+            <input type="text" name="favFood" id="favFood">
+            <input type="submit" name="submit">
+        </form>
+        <br>
+
+        <h2 id="subHeading2">There is some more random text below</h2>
+        <!-- Highlight both paragraphs on page when mouse over, then unhighlight when mouse leaves -->
+
+        <p onmouseover="highlightAll()" onmouseout="unHighlightAll()" id="para2">Lorem ipsum dolor sit amet, consectetur
+            adipiscing elit. Vivamus malesuada luctus justo et elementum. Vestibulum purus dolor, lobortis id varius
+            vel, elementum sit amet purus. Donec eu dolor quis justo mollis malesuada. Aenean sed risus massa. Phasellus
+            egestas maximus orci sed sollicitudin. Cras tincidunt venenatis sapien sed fermentum. Aenean quis erat
+            cursus, cursus odio eu, pretium nisl. Phasellus maximus maximus ullamcorper. In ut augue sit amet arcu
+            pellentesque laoreet vel non massa. Ut facilisis in augue eget placerat. Morbi molestie scelerisque tortor.
+            Aliquam maximus, velit eu congue commodo, leo lacus pellentesque nunc, id bibendum nibh ipsum nec metus.
+            Maecenas dictum porttitor cursus.
+        </p>
+
+    </div>
+    <div>
+        <img id="milkImg" src="images/milk.jpg" alt="Milk" style="width: 300px;">
+        <br>
+        <button onclick="hide()">Hide the image!</button> <!-- Hides milk image when button is clicked-->
+        <br> <br>
+
+        <img id="veggiesImg" src="images/vegetables.jpg" alt="vegetables" style="width: 300px;">
+        <br>
+        <button onclick="changeImg()">Change the image!</button>
+        <!-- Changes vegetables image to strawberry when button is clicked -->
+        <br> <br>
+
+        <p>Hover over the image below to change it.</p>
+        <img onmouseover="changeImg2()" onmouseout="changeImgBack()" id="strawberryImg" src="images/strawberry.jpg"
+            alt="Strawberry" style="width: 200px;">
+        <!-- Changes strawberry image to vegetable image when mouse over, then changes back when mouse leaves -->
+
+        <p><b>Right click</b> image below to create alert message.</p>
+        <img oncontextmenu="createAlert()" id="oliveOilImg" src="images/olive-oil.jpg" alt="olive oil"
+            style="width: 300px;">
+        <!-- Creates alert message to user when image is clicked -->
+    </div>
+
+</body>
+
+</html>

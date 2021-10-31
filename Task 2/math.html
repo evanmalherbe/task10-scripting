@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task 10 - Compulsory task 2</title>
+    <script src="task2.js"></script> <!-- Use external javascript file task2.js -->
+</head>
+
+<body>
+    <h1>Use the forms below to do some basic maths</h1>
+
+    <!-- Takes 2 numbers the user enters and adds them using the "sum()" function. Prints answer to page-->
+    <p>Addition</p>
+    <input type="text" name="num1" id="num1">
+    <label> + </label>
+    <input type="text" name="num2" id="num2">
+    <button onclick="sum()"> = </button> <!-- Calls "sum()" function when user clicks the equals button -->
+    <label id="ansSum"></label> <!-- Displays answer to calculation -->
+    <br><br>
+
+    <!-- Takes 2 numbers the user enters and subtracts them using the "subtract()" function. Prints 
+        answer to page -->
+    <p>Subtraction</p>
+    <input type="text" name="num7" id="num7">
+    <label> - </label>
+    <input type="text" name="num8" id="num8">
+    <button onclick="subtract()"> = </button> <!-- Calls "subtract()" function when user clicks the equals button -->
+    <label id="ansSubtract"></label> <!-- Displays answer to calculation -->
+    <br><br>
+
+    <!-- Takes 2 numbers the user enters and multiplies them using the "multiply()" function. Prints answer to page-->
+    <p>Multiplication</p>
+    <input type="text" name="num3" id='num3'>
+    <label> x </label>
+    <input type="text" name="num4" id='num4'>
+    <button onclick="multiply()"> = </button> <!-- Calls "multiply()" function when user clicks the equals button -->
+    <label id="ansMultiply"></label> <!-- Displays answer to calculation -->
+    <br><br>
+
+    <!-- Takes 2 numbers the user enters and mods them using the "mod()" function. Prints answer to page-->
+    <p>Modulus (remainder)</p>
+    <input type="text" name="num5" id='num5'>
+    <label> mod </label>
+    <input type="text" name="num6" id='num6'>
+    <button onclick="mod()"> = </button> <!-- Calls "mod()" function when user clicks the equals button -->
+    <label id="ansMod"></label> <!-- Displays answer to calculation -->
+
+</body>
+
+</html>

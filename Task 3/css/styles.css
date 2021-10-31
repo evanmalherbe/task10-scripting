@@ -1,0 +1,158 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    box-sizing: border-box;
+    /* This makes it easier to keep track of the dimensions of divs and other elements,
+     as the padding and border are included in the overall width, instead of the usual situation, where you have to 
+     remember to add them in afterwards in your head. 
+     I learned about this here: https://www.w3schools.com/cssref/css3_pr_box-sizing.asp */
+
+}
+
+.mathImg {
+    padding: 10px;
+}
+
+/* Container styling using Flexbox. 
+Main container */
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.topSection {
+    display: flex;
+    flex-direction: row;
+}
+
+.forms {
+    display: flex;
+    flex-direction: row;
+}
+
+/* -------------------------------- */
+
+/* Form styling for currency conversion section */
+
+label {
+    padding: 5px;
+
+}
+
+#randInput,
+#randInput2,
+#randInput3 {
+    margin-bottom: 5px;
+
+}
+
+.dollarForm {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #dddddd;
+}
+
+.euroForm {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #dddddd;
+}
+
+.poundForm {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #dddddd;
+}
+
+#selectElement {
+    margin-bottom: 10px;
+}
+
+/* ----------------------------------------- */
+
+/* Styling for calculator starts here. Used Flexbox to lay out the "buttons" and made the number buttons different 
+colours from the operator buttons, to make it easier to use. */
+
+.calculatorHeading {
+    text-align: center;
+}
+
+/* General styling for calculator container */
+.calculator {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    /* to center calculator on page */
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 370px;
+    height: auto;
+    /* Height dictated by contents of container */
+    margin-bottom: 40px;
+    /* Some space at the bottom of the page */
+}
+
+/* Styling of result box for numbers being entered by user and answers to appear. */
+.resultBox {
+    width: 100%;
+    /* Span whole length of top line */
+    padding: 20px;
+    margin: 5px;
+    border: 1px solid #dddddd;
+    background-color: white;
+    text-align: end;
+    font-size: 20px;
+}
+
+/* Styling for buttons of calculator */
+.calculator .one,
+.two,
+.three,
+.four,
+.five,
+.six,
+.seven,
+.eight,
+.nine,
+.zero,
+.spacer,
+.divide,
+.multiply,
+.add,
+.subtract,
+.equals,
+.clear {
+    width: 40px;
+    padding: 20px;
+    margin: 5px;
+    border: 1px solid #dddddd;
+    text-align: center;
+    background-color: #f8f9fa;
+    font-size: 20px;
+}
+
+/* Set background colour of operator buttons to be darker than number buttons to make it easier to use. */
+.divide,
+.multiply,
+.add,
+.subtract,
+.spacer,
+.clear,
+.equals {
+    background-color: #e6e8ec;
+}
+
+/* Darkens operator buttons more than number buttons when hovered over. */
+.calculator .operators:hover {
+    background-color: #d9dbe0;
+}
+
+/* Darkens number buttons slightly when hovered over. */
+.calculator .numbers:hover {
+    background-color: #e5e7eb;
+}
+
+/* Styling for calculator ends ---------------------------- */

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="task3.js"></script> <!-- Use task3.js external script file -->
+    <title>Task 10 - Compulsory task 3</title>
+</head>
+
+<!-- This command calls the function "createSelectForm()" when the page loads. The function creates a dropdown list 
+of 25 options lower down the page. -->
+
+<body onload="createSelectForm()">
+    <div class="container">
+        <!-- Main container div starts here. All divs on the page are layed out using Flexbox. I learned how to 
+        use Flexbox from "The Odin Project", which I studied in the month before starting this bootcamp.
+        https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/introduction-to-flexbox  -->
+
+        <div class="topSection">
+            <!-- Container for top section of page starts here and is layed out using Flexbox-->
+            <div>
+                <h1>Welcome to task 3</h1>
+                <h2>There's so much we can do with Javascript</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Vivamus malesuada luctus justo et elementum. Vestibulum purus dolor, lobortis id
+                    varius
+                    vel, elementum sit amet purus. Donec eu dolor quis justo mollis malesuada. Aenean sed risus massa.
+                    Phasellus
+                    egestas maximus orci sed sollicitudin. Cras tincidunt venenatis sapien sed fermentum. Aenean quis
+                    erat
+                    cursus, cursus odio eu, pretium nisl. Phasellus maximus maximus ullamcorper. In ut augue sit amet
+                    arcu
+                    pellentesque laoreet vel non massa. Ut facilisis in augue eget placerat. Morbi molestie scelerisque
+                    tortor.
+                    Aliquam maximus, velit eu congue commodo, leo lacus pellentesque nunc, id bibendum nibh ipsum nec
+                    metus.
+                    Maecenas dictum porttitor cursus.
+                </p>
+
+                <!-- Clicking on the button below calls a function called "timesClicked()" that counts the clicks and 
+                displays the total number of clicks to the page underneath the button. -->
+                <button onclick="timesClicked()">Click this button as many times as you like!</button>
+                <br> <br>
+                <label id="timesClicked"></label> <!-- Displays number of times button is clicked -->
+            </div>
+
+            <!-- Image on right of page for decoration -->
+            <img src="images/math-img.jpg" alt="Calculator and pen" class="mathImg">
+
+        </div> <!-- Top section container ends here -->
+
+        <!-- I encountered a very frustrating problem with the forms below. When I clicked the button to 
+        convert, the resulting answer would only appear for a millisecond before the page would reload and 
+        clear away the answer. I Googled a bit and found the solution. The "Submit" button was causing the page
+        to reload. So I changed it to just a regular button, not a "Submit" button, which fixed it. I consulted 
+        the following website for the solution:
+        https://stackoverflow.com/questions/50494866/javascript-result-disappears-immediately-->
+
+        <div>
+            <hr>
+        </div> <!-- Horizontal line to make things look neater. -->
+
+        <h2>Convert Rands to Dollars, Euros or Pounds</h2>
+        <div class="forms">
+            <!-- This container holds the 3 currency conversion forms below. Each of the forms is in its own
+            div container and they are layed out in a row using Flexbox. -->
+
+            <!-- This form gets the user to enter a Rand value, then feeds that value to a function to convert that to 
+            Dollars. The new Dollar value is then printed beneath the form. -->
+            <div class="dollarForm">
+                <label for="randInput">Enter Rand value:</label> <br>
+                <input type="text" name="randInput" id="randInput"> <br>
+                <button onclick="convertRandToDollar()">Convert to Dollars</button> <br> <br>
+                <label id="ansInDollars"></label> <!-- Converted Dollar value appears here -->
+            </div>
+
+            <!-- This form gets the user to enter a Rand value, then feeds that value to a function to convert that 
+            to Euro. The new Euro value is then printed beneath the form. -->
+            <div class="euroForm">
+                <label for="randInput2">Enter Rand value:</label> <br>
+                <input type="text" name="randInput2" id="randInput2"> <br>
+                <button onclick="convertRandToEuro()">Convert to Euro</button> <br> <br>
+                <label id="ansInEuro"></label> <!-- Converted Euro value appears here -->
+            </div>
+
+            <!-- This form gets the user to enter a Rand value, then feeds that value to a function to convert that 
+            to Pounds. The new Pound value is then printed beneath the form. -->
+            <div class="poundForm">
+                <label for="randInput3">Enter Rand value:</label> <br>
+                <input type="text" name="randInput3" id="randInput3"> <br>
+                <button onclick="convertRandToPound()">Convert to Pounds</button> <br> <br>
+                <label id="ansInPounds"></label> <!-- Converted Pound value appears here -->
+            </div>
+        </div> <!-- Container for the 3 currency conversion forms above ends here -->
+
+        <div>
+            <!-- Container for dropdown list -->
+            <hr> <!-- Horizontal line to make things look neater. -->
+
+            <h2>Try using this dropdown list with 25 options</h2>
+            <!-- This is a drop down list of 25 options that will only be fully created by the function called 
+            createSelectForm(), which is called when the page loads using the "onload" command in the <body>
+            element above.  -->
+
+            <label for="selectElement">Select an option:</label>
+            <select id="selectElement" name="selectElement"></select>
+
+            <hr> <!-- Horizontal line to make things look neater. -->
+        </div>
+
+        <h3 class="calculatorHeading">Try this Javascript powered calculator!</h3>
+
+        <!-- Javascript calculator container starts here. The "buttons" (divs) are layed out using Flexbox. 
+        Each button calls a particular function when clicked and stores the numbers the user enters in 
+        variables, to be used in the calculations. -->
+
+        <div class="calculator">
+            <div class="resultBox" id="resultBox">.</div>
+            <div class="spacer">&nbsp;&nbsp;</div>
+            <div class="spacer">&nbsp;&nbsp;</div>
+            <div class="spacer">&nbsp;&nbsp;</div>
+            <div onclick="storeOperatorType('÷')" class="divide operators">÷</div>
+            <div onclick="displayEnteredNumbers('1')" class="one numbers">1</div>
+            <div onclick="displayEnteredNumbers('2')" class="two numbers">2</div>
+            <div onclick="displayEnteredNumbers('3')" class="three numbers">3</div>
+            <div onclick="storeOperatorType('x')" class="multiply operators">x</div>
+            <div onclick="displayEnteredNumbers('4')" class="four numbers">4</div>
+            <div onclick="displayEnteredNumbers('5')" class="five numbers">5</div>
+            <div onclick="displayEnteredNumbers('6')" class="six numbers">6</div>
+            <div onclick="storeOperatorType('-')" class="subtract operators">-</div>
+            <div onclick="displayEnteredNumbers('7')" class="seven numbers">7</div>
+            <div onclick="displayEnteredNumbers('8')" class="eight numbers">8</div>
+            <div onclick="displayEnteredNumbers('9')" class="nine numbers">9</div>
+            <div onclick="storeOperatorType('+')" class="add operators">+</div>
+            <div onclick="clearResultBox()" class="clear operators">Clear</div>
+            <div onclick="displayEnteredNumbers('0')" class="zero numbers">0</div>
+            <div class="spacer">&nbsp;&nbsp;</div>
+            <div onclick="calculateAns()" class="equals operators">=</div>
+        </div> <!-- Calculator container ends -->
+
+    </div> <!-- Main container div ends here -->
+</body>
+
+</html>
