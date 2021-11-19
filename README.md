@@ -60,21 +60,21 @@ This project created mainly using html and Javascript, so it needs no special in
 **Task 1**
 Click on the various buttons on the page to see what they do. Most of them have the expected outcome as the name of the button. For example, "Change font style" or "Change heading size". See figure 1 below.
 
-[Figure 1](screenshots/screenshot1.png)
+![Figure 1](screenshots/screenshot1.png)
 
 **Task 2**
 Click in the input boxes and type some numbers to add, subtract, multiply or find the Modulus of. Then click the equals button for the result. See figure 2 below.
 
-[Figure 2](screenshots/screenshot2.png)
+![Figure 2](screenshots/screenshot2.png)
 
 **Task 3**
 The first part of the page lets you click on a button and the script displays a count of the number of times you have clicked it. A bit lower down is a currency convertor to change Rands to Dollars, Euro or Pounds. Then there is a dropdown list that was created with a loop, instead of manually having to code 25 <option> elements. Lastly, is a calculator that can do all 4 basic math operations. You can continue calculating using the answers of previous calculations and click a button to clear the screen as well. See figures 3, 4 and 5 below.
 
-[Figure 3](screenshots/screenshot3.png)
+![Figure 3](screenshots/screenshot3.png)
 
-[Figure 4](screenshots/screenshot4.png)
+![Figure 4](screenshots/screenshot4.png)
 
-[Figure 5](screenshots/screenshot5.png)
+![Figure 5](screenshots/screenshot5.png)
 
 ## Credits
 This project was created by Evan Malherbe as part of a task for HyperioDev Full Stack Development Bootcamp November 2021 [GitHub profile](https://github.com/evanmalherbe) 
